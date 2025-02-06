@@ -1,7 +1,9 @@
+# 국내 도시 전용
+
 import requests  # pip install requests
 from bs4 import BeautifulSoup  # pip install beautifulsoup4
 
-weatherArea = "제주"
+weatherArea = "도쿄"
 weatherHtml = requests.get(f"https://search.naver.com/search.naver?query={weatherArea}+날씨")
 # print(weatherHtml) -> 200 코드가 반환되면 올바른 요청
 soup = BeautifulSoup(weatherHtml.text, "html.parser")
